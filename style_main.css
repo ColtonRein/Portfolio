@@ -1,0 +1,1244 @@
+/*-------------------------------Colton Rein----------------------------------*/
+/*-----------------------------------CSS--------------------------------------*/
+:root {
+  --primary: #0b00a5;
+  --background: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*------------------------------Navigation Bar--------------------------------*/
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.header {
+  background-color: white;
+  z-index: 99;
+  border-bottom: 2px solid var(--primary);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger:hover span:nth-child(2) {
+  background-color: var(--primary);
+  transform: translateX(10px);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.nav-item {
+  margin-left: 3rem;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #475569;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.nav-logo:hover {
+  color: var(--primary);
+}
+
+/* Hero Seciton */
+.hero-section {
+  color: white;
+  background: linear-gradient(to right, rgba(45, 39, 110, 0.90), rgba(11, 0, 165, 0.90)), url(http://coltonrein.com/assets/pawel-czerwinski-LEbkdsB8OMg-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 77px);
+  width: 100%;
+}
+
+.heading-main {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 70rem;
+
+}
+
+.text-main {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-top: 3rem;
+  font-style: bold;
+  color: #ffffff;
+}
+
+.hero-button {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+div {
+  display: block;
+}
+
+
+.btn--bg {
+  padding: 1.5rem 5rem;
+  font-size: 1rem;
+}
+
+.btn {
+  background: white;
+  color: rgba(24, 24, 24, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px 0 rgba(0 0 0 / 50%);
+  transition: transform 0.3s;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Scroll Down Arrows */
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow span {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-bottom: 0.25rem solid white;
+  transform: rotate(45deg);
+  border-right: 0.25rem solid white;
+  margin: 0.1rem;
+  animation: scroll 3s infinite;
+}
+
+.arrow:hover span {
+  transition: 0.4s;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.1s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-1rem, -1rem);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(1rem, 1rem);
+  }
+}
+
+/*-------------------------------About Section-------------------------------*/
+
+#about {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background);
+}
+
+.grid-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 2rem 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 5rem 3rem 7rem;
+  margin: 0 auto;
+}
+
+.grid-item1 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.grid-item2 {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/4;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  padding: 3rem 3rem 3rem 8rem;
+}
+
+.grid-item3 {
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/4;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  text-align: left;
+  padding: 3rem 6rem 3rem 3rem;
+}
+
+.grid-container h2 {
+  font-size: 4rem;
+  padding: 1rem 1rem 1rem;
+}
+
+.grid-container h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.grid-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.grid-item2 p {
+  margin-bottom: 1rem;
+  color: #5c5c5c;
+  max-width: 70ch;
+}
+
+.grid-item1 p {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  color: #5c5c5c;
+  max-width: 70ch;
+}
+
+.grid-item3 h3 {
+  margin: 1rem 0;
+}
+
+.break {
+  width: 50%;
+  border-bottom: solid;
+  border-width: 0.2rem;
+  border-image: linear-gradient(to right, transparent, var(--primary), transparent) 1;
+  margin: 1rem 0;
+}
+
+.btn--about {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px 0 rgba(0 0 0 / 50%);
+  transition: transform 0.3s;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn--about:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.grid-item3 a {
+  margin-right: 2rem;
+}
+
+.about-2 a:link {
+  color: var(--primary) ;
+}
+
+.about-2 a:visited {
+  color: var(--primary) ;
+}
+
+.about-2 a:hover {
+  color: black ;
+}
+
+.skills-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.skills-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.skills_skill {
+  color: rgb(5, 5, 5);
+  background-color: rgba(87, 87, 87, 0.418);
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 1rem;
+  transition: 0.3s;
+  box-shadow: 0 2px 2px 0 rgba(0 0 0 / 50%);
+}
+
+.skills_skill:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/*-----------------------------Portfolio Section------------------------------*/
+/*--------------------------------Portfolio 1---------------------------------*/
+#portfolio1 {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 3rem 3rem 5rem;
+}
+
+.grid-container-portfolio1 {
+  display: grid;
+  grid-gap: 5rem 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: repeat(5, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+}
+
+.grid-portfolio1 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.grid-portfolio1 p {
+  color: #5c5c5c;
+  max-width: 70ch;
+}
+
+.grid-portfolio1-about {
+  grid-column: 2/3;
+  grid-row: 2/5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  text-align: left;
+  padding: 2rem;
+}
+
+.grid-portfolio1-about p {
+  color: #5c5c5c;
+  max-width: 60ch;
+}
+
+
+.grid-portfolio1-image {
+  grid-column: 1/2;
+  grid-row: 2/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url(http://coltonrein.com/assets/Project_1.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 2rem;
+  transition: 0.4s;
+}
+
+.grid-portfolio1-image a {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 10; /* Places the link above everything else in the div */
+  background-color: #FFF; /* Fix to make div clickable in IE */
+  opacity: 0; /* Fix to make div clickable in IE */
+  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.grid-portfolio1-image:hover {
+  transform: scale(1.025);
+}
+
+.grid-portfolio1 h2 {
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+
+.grid-portfolio1-about h3 {
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+
+
+.grid-portfolio1-about p,
+.grid-portfolio1 p,
+.grid-portfolio2-about p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+
+.btn--portfolio {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px 0 rgba(0 0 0 / 50%);
+  transition: transform 0.3s;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-right: auto;
+}
+
+.btn--portfolio:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+/*--------------------------------Portfolio 2---------------------------------*/
+#portfolio2 {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background);
+  padding: 3rem 3rem;
+}
+
+.grid-container-portfolio2 {
+  display: grid;
+  grid-gap: 5rem 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: repeat(1, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+}
+
+
+.grid-portfolio2-about {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: right;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: right;
+  padding: 2rem;
+}
+
+.grid-portfolio2-about p {
+  color: #5c5c5c;
+  max-width: 90ch;
+}
+
+.grid-portfolio2-image {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url(http://coltonrein.com/assets/allbirds_receipt_image.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.grid-portfolio2-image a {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 10; /* Places the link above everything else in the div */
+  background-color: #FFF; /* Fix to make div clickable in IE */
+  opacity: 0; /* Fix to make div clickable in IE */
+  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.grid-portfolio2-image:hover {
+  transform: scale(1.025);
+}
+
+.grid-portfolio2 h2 {
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+
+.grid-portfolio2-about h3 {
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+
+.grid-portfolio2-about p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.grid-portfolio2-about a {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+.skills-portfolio2 {
+  margin-left: auto;
+}
+
+/*--------------------------------Portfolio 3---------------------------------*/
+
+#portfolio3 {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 3rem 3rem;
+}
+
+.grid-container-portfolio3 {
+  display: grid;
+  grid-gap: 5rem 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: repeat(1, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+}
+
+
+.grid-portfolio3-about {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  padding: 2rem;
+}
+
+.grid-portfolio-about p {
+  color: #5c5c5c;
+  max-width: 60ch;
+}
+
+.grid-portfolio3-image {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url(http://coltonrein.com/assets/laptop-2746336_960_720.webp) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 2rem;
+}
+
+.grid-portfolio3 h2 {
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+
+.grid-portfolio3-about h3 {
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+
+.grid-portfolio3-about p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.grid-portfolio3-about a {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.skills-portfolio3 {
+  margin-right: auto;
+}
+
+/*-------------------------------Contact Section------------------------------*/
+
+#contact {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background: linear-gradient(to right, rgba(45, 39, 110, 0.90), rgba(11, 0, 165, 0.90)), url(http://coltonrein.com/assets/pawel-czerwinski-LEbkdsB8OMg-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.container-contact {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container-contact h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.container-contact p {
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  max-width: 70ch;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+  margin: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: black;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  background-color: white;
+}
+
+.form-element {
+  appearance: none;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  background-color: var(--background);
+  padding: 1rem;
+  transition: 0.4s;
+}
+
+.form-element:focus {
+  box-shadow: 0 5px 15px 0 rgba(0 0 0 / 50%);
+  background-color: white;
+}
+
+textarea {
+  resize: none;
+  min-height: 6rem;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.submit-group {
+  grid-column: 1 / -1;
+  text-align: right;
+}
+
+input[type="submit"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 1rem;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgba(0 0 0 / 50%);
+  transition: 0.4s;
+  -webkit-appearance: none;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+/*-------------------------------Footer Section-------------------------------*/
+
+#footer {
+  height: 40vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+
+.break-footer {
+    width: 50%;
+    border-bottom: solid;
+    border-width: 0.2rem;
+    border-image: linear-gradient(to right, transparent, var(--background), transparent) 1;
+    margin: 1rem 0;
+}
+
+#footer h2 {
+  font-size: 2rem;
+}
+
+#footer p {
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  max-width: 70ch;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+#footer .social a {
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+}
+ 
+.footer-info h3 {
+  padding: 1rem;
+}
+
+.footer-lower {
+  font-size: 0.75rem;
+  color: var(--background);
+}
+
+.footer-lower a:link {
+  color: white;
+}
+
+.footer-lower a:visited {
+  color: white;
+}
+
+.footer-lower a:hover {
+  color: var(--primary);
+}
+
+/*----------------------------Thank You Submit Page---------------------------*/
+/*--------------------------------thanks.html---------------------------------*/
+
+.thank-you {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(45, 39, 110, 0.75), rgba(11, 0, 165, 0.75)), url(http://coltonrein.com/assets/pawel-czerwinski-LEbkdsB8OMg-unsplash.jpg);
+  background-size: cover;
+}
+
+.thank-you-header {
+  margin: 3rem 2rem;
+}
+
+.thank-you-header h1{
+  font-size: 4rem;
+  padding: 1rem;
+  color: white;
+}
+
+.thank-you-header p{
+  font-size: 2rem;
+  padding: 1rem;
+  color: white;
+}
+
+.thank-you-btn {
+  background: white;
+  color: rgba(24, 24, 24, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px 0 rgba(0 0 0 / 50%);
+  transition: transform 0.3s;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+
+/*-----------------------------Begin Media Queries----------------------------*/
+/*-------------------------------Nav Menu Media-------------------------------*/
+@media only screen and (max-width: 910px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+      0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .arrow {
+    display: none;
+  }
+
+}
+
+/*------------------------------------950px-----------------------------------*/
+@media only screen and (max-width: 950px) {
+
+  /* about section */
+  .grid-item1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .grid-item2 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .grid-item3 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  /* portfolio1 */
+  #portfolio1 {
+    padding: 0 3rem;
+  }
+
+  .grid-container-portfolio1 {
+    display: grid;
+    grid-gap: 1rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+  }
+
+  .grid-portfolio1-image {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    padding-bottom: 0;
+  }
+
+  .grid-portfolio1-about {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding-top: 0;
+  }
+
+  /* portfolio2 */
+  #portfolio2 {
+    padding: 0 3rem;
+  }
+
+  .grid-container-portfolio2 {
+    display: grid;
+    grid-gap: 1rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+  }
+
+  .grid-portfolio2-image {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    padding-bottom: 0;
+  }
+
+  .grid-portfolio2-about {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding-top: 0;
+  }
+
+  /* portfolio3 */
+  #portfolio3 {
+    padding: 0 3rem;
+  }
+
+  .grid-container-portfolio3 {
+    display: grid;
+    grid-gap: 1rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+  }
+
+  .grid-portfolio3-image {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    padding-bottom: 0;
+  }
+
+  .grid-portfolio3-about {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding-top: 0;
+  }
+
+}
+
+/*---------------------------------Form Media---------------------------------*/
+@media only screen and (max-width: 720px) {
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*------------------------------------550px-----------------------------------*/
+@media only screen and (max-width: 550px) {
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.25rem;
+  }
+
+  #about h2 {
+    font-size: 3rem;
+  }
+
+  #portfolio1 {
+    padding: 3rem 1rem 1rem;
+  }
+
+  #portfolio2 {
+    padding: 1rem;
+  }
+
+  #portfolio3 {
+    padding: 1rem;
+  }
+
+  .grid-container-portfolio1 {
+    padding: 0;
+  }
+
+  .grid-container-portfolio2 {
+    padding: 0;
+  }
+
+  .grid-container-portfolio3 {
+    padding: 0;
+  }
+
+  .grid-portfolio1-about h3 {
+    font-size: 3rem;
+    padding-top: 0;
+  }
+
+  .grid-portfolio2-about h3 {
+    font-size: 3rem;
+    padding-top: 0;
+  }
+
+  .grid-portfolio3-about h3 {
+    font-size: 3rem;
+    padding-top: 0;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  #contact {
+    padding-top: 20px;
+  }
+}
+
+/*------------------------------------440px-----------------------------------*/
+
+@media only screen and (max-width: 440px) {
+
+  .grid-container {
+    padding: 4rem 2rem 2rem;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+  }
+
+  .skills_skill {
+    padding: 0.5rem;
+  }
+
+  .btn--bg {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+
+  .btn--about {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .btn--portfolio {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+
+}
+
+/*------------------------------------360px-----------------------------------*/
+
+@media only screen and (max-width: 360px) {
+
+  form {
+    margin: 1rem 0;
+  }
+
+  #contact p {
+    padding-top: 0;
+  }
+
+  .grid-portfolio1-image {
+    padding-top: 0;
+  }
+
+  .grid-portfolio2-image {
+    padding-top: 0;
+  }
+
+  .grid-portfolio3-image {
+    padding-top: 0;
+  }
+}
+
+/*------------------------------------330px-----------------------------------*/
+
+@media only screen and (max-width: 330px) {
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  #footer {
+    padding: 2rem 1rem;
+  }
+
+  #footer .social a {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+/*---------------------------- Nav Bar Landscape------------------------------*/
+
+@media only screen and (max-height: 600px) and (max-width: 910px) {
+  .nav-item {
+    margin: 0.75rem 1rem;
+  } 
+}
